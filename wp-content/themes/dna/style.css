@@ -1,0 +1,46 @@
+/*
+Theme Name: Dna
+Theme URI: https://www.dnadevendas.com.br/
+Author: Filipe Matos de Olivera
+Author URI: https://www.dnadevendas.com.br/
+Description: Tema criado com bootstrap e wordpress
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: videos, mova, recife, 
+Text Domain: Mova Vídeos
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+h1{font-size: 35px; text-transform: uppercase; font-weight: 700}
+h4{font-size: 14px; text-transform: uppercase; color: #b91f2e}
+footer{margin: 20px 0}
+.linha-topo{width: 100%;background: #b91f2e; margin: 0; height: 4px; top: 0;}
+
+/*header*/
+.header{background: white; padding: 10px} 
+
+/*categorias*/
+.medicos{background: teal; color: white}
+.clientes{background: #b91f2e; color: white}
+.parceiros{background: slateblue; color: white}
+
+.areas-de-destaque{background: #d2d2d2; width: 100%; margin: 20px; padding: 8px 0}
+.areas-de-destaque span{padding: 10px}
+
+/*carousel*/
+.carousel-inner > .item.next.left, .carousel-inner > .item.prev.right, .carousel-inner > .item{	height: 400px;}
+.carousel-inner span{padding: 10px; text-transform: uppercase}
+.carousel-caption{padding-bottom: 90px}
+.carousel-caption{text-shadow: none}
+.carousel-inner img{filter: brightness(80%);}
+
+/*footer*/
+.sidebar-posts ul, .sidebar{list-style: none; text-decoration: none;}
+.sidebar-posts h3{font-size: 14px}
+/*footer*/
+.footer-line{width: 100%; background: #b91f2e; height: 30px; padding-top: 6px; margin-bottom: 20px}
+footer h3{text-transform: uppercase; color: #b91f2e}
+footer a{color: #515151}
+.footer-line a {color: white; margin-top: 10px}
