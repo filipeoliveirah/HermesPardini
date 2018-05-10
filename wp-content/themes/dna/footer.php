@@ -60,14 +60,26 @@
           ?>
         </div>
       </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="col-md-3">
+            <a href="https://www3.hermespardini.com.br/pagina/103/o-hermes-pardini.aspx">Conheço o Grupo</a>
+          </div>
+
+          <div class="col-md-6">
+          <a href="javascript:;">RT.: Dr. Ariovaldo Mendonça - CRMMG 33477 - RQE 21876 - Inscrição CRM356-MG</a>
+          </div>
+
+          <div class="col-md-3">
+          <a href="javascript:;">Esta empresa tem o apoio da Finep.</a>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="<?php bloginfo('template_url'); ?>/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.magnific-popup.min.js"></script>
-    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/galeria.js"></script>
     <?php wp_footer(); ?>
   </body>
 </html>

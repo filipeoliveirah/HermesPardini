@@ -1,56 +1,56 @@
+<?php $wp_query = new WP_Query(); ?>
 <!-- Carousel
-    ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class=""></li>
-        <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="2" class=""></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">
-        <div class="item">
-            <img src="http://via.placeholder.com/1550x550">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p>Note: If you're viewing this page via a <code>file://</code>
- URL, the "next" and "previous" Glyphicon buttons on the left and right 
-might not load/display properly due to web browser security rules.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item active">
-        <img src="http://via.placeholder.com/1550x550">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget 
-quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor 
-id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-        <img src="http://via.placeholder.com/1550x550">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget 
-quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor 
-id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-            </div>
-          </div>
+================================================== -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <div class="visible-lg">
+    <ol class="carousel-indicators">
+    <?php
+        $inc_slide = 0;
+        $args = array( 
+          'category_name' => 'destaque',
+          //'posts_per_page'=> 3
+        );
+        $wp_query->query($args);
+        while ($wp_query->have_posts()) : $wp_query->the_post();
+      ?>  
+      <li data-target="#myCarousel" data-slide-to="<?php echo $inc_slide; ?>" class="<?php if($inc_slide == 0): echo 'active';  endif;?>"></li>
+      <?php
+        $inc_slide++;
+        endwhile;
+      ?>
+    </ol>
+  </div>
+  <div class="carousel-inner" role="listbox">
+    <?php 
+      $inc = 0;
+      $wp_query = new WP_Query();
+      $args = array( 
+        'category_name' => 'destaque',
+        'posts_per_page'=> 3
+      );
+      $wp_query->query($args);
+      while ($wp_query->have_posts()) : $wp_query->the_post();
+    ?>
+    <div class="item <?php if($inc == 0): echo 'active'; endif; ?>">
+      <?php the_post_thumbnail('full'); ?>
+      <div class="container">
+        <div class="carousel-caption">
+          <h1><?php the_title(); ?></h1>
         </div>
       </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div><!-- /.carousel -->
+    </div>
+    <?php
+    $inc++;
+    endwhile;
+    ?> 
+  </div>
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Voltar</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Próximo</span>
+  </a>
+</div><!-- /.carousel -->

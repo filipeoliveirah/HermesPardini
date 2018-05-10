@@ -1,12 +1,12 @@
 <?php get_header(); ?>
+<?php include_once("inc/slider-post.php") ?>
 
-<div class="container single">
-  <div class="row">
-    
+<div class="container">
+  <div class="row">    
     <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
     <div class="col-md-8 conteudo-single">
-      <h1><?php the_title(); ?></h1>
-      <?php the_content(); ?>
+      <p><?php wp_custom_breadcrumbs(); ?></p>
+      <p><?php the_content(); ?></p>
     </div>
     <?php endwhile; else: ?>
     <?php endif; ?>

@@ -32,9 +32,12 @@
   <body>
     <hr class="linha-topo">
     <div class="header">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3 logo"><a href="<?php bloginfo('home'); ?>"><img src="<?php echo get_theme_mod( 'm1_logo' ); ?>" class="img-responsive center-block" alt="Mova Vídeos" title="Mova Vídeos"></a></div>
+      <div class="">
+        <div class="row"> 
+          <div class="col-md-3 logo">
+            <a href="<?php bloginfo('home'); ?>"><img src="<?php echo get_theme_mod( 'm1_logo' ); ?>" class="img-responsive center-block" alt="Mova Vídeos" title="Hermes Pardini">
+            </a>
+          </div>
           <div class="col-md-5">
             <!--menu-->
               <nav class="navbar navbar-default">
@@ -47,7 +50,7 @@
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand visible-xs" href="#" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">Navegação do site</a>
+                    <a class="navbar-brand visible-xs" href="#" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">Menu</a>
                   </div>
 
                   <?php
@@ -63,16 +66,29 @@
                     'walker'            => new wp_bootstrap_navwalker())
                     );
                   ?>
-              </div><!-- /.container-fluid -->
-            </nav>
+                </div><!-- /.container-fluid -->
+              </nav>
             <!--menu-->
             <!--
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#" data-toggle="modal" data-target=".bs-example-modal-sm" ><span class="glyphicon glyphicon glyphicon-user"></span></a></li>
             </ul>-->
           </div>
-          <div class="col-md-4"><?php get_search_form(); ?></div>
+          <div class="">
+           <div class="col-md-4 social-media visible-lg"> 
+            <ul>
+              <li>Home</li>
+              <li>|</li>
+              <li>Fale Conosco</li>
+              <li><i class="fab fa-facebook-f"></i></li>
+              <li><i class="fab fa-instagram"></i></li>
+            </ul>
+            </div>
+            <div class="visible-lg"><?php get_search_form(); ?></div>
+          </div>
         </div>
       </div>
     </div>
+    
+    <hr class="linha-topo-bottom">
     <!--/header-->

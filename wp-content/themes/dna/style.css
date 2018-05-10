@@ -7,40 +7,70 @@ Description: Tema criado com bootstrap e wordpress
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: videos, mova, recife, 
-Text Domain: Mova Vídeos
+Tags: , 
+Text Domain: dnadevendas.com.br
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
-h1{font-size: 35px; text-transform: uppercase; font-weight: 700}
-h4{font-size: 14px; text-transform: uppercase; color: #b91f2e}
-footer{margin: 20px 0}
-.linha-topo{width: 100%;background: #b91f2e; margin: 0; height: 4px; top: 0;}
+body{overflow-x: hidden}
+h1{font-size: 28px; text-transform: uppercase; font-weight: 700}
+h4{font-size: 14px; text-transform: uppercase;}
+h1, h2, h3, h4, h5{margin-top: 0;}
+.linha-topo, .linha-topo-bottom{width: 100%; background: #b91f2e; margin: 0; height: 2px; top: 0;}
+.linha-topo-bottom{background: #d2d2d2;}
+hr{border: 1px solid #d2d2d2;}
+p{text-align: justify}
 
 /*header*/
-.header{background: white; padding: 10px} 
+.header{background: white; padding: 20px;}
+.social-media ul li{display: inline-flex; color: #b91f2e; margin-right:15px}
+.header ul li a{font-size: 20px; font-weight: 700}
+.social-media ul{padding: 0 20px;}
 
+.navbar{margin-bottom: 0}
+.navbar-default{background-color: white; border-color: white; margin-top: 30px}
+
+.conteudo-single{margin-top: 20px}
 /*categorias*/
-.medicos{background: teal; color: white}
-.clientes{background: #b91f2e; color: white}
-.parceiros{background: slateblue; color: white}
+.medicos{background: teal; color: white; border: 0}
+.clientes{background: #b91f2e; color: white; border: 0}
+.parceiros{background: #7c438a; color: white; border: 0}
 
-.areas-de-destaque{background: #d2d2d2; width: 100%; margin: 20px; padding: 8px 0}
+/*areas de destaque*/
+.areas-de-destaque{background: #f0f0f0; width: 100%; margin: 20px; padding: 8px 0}
 .areas-de-destaque span{padding: 10px}
+.area-de-destaque{background: #b91f2e; padding: 20px 0}
+.area-de-destaque .informacoes{position: absolute; padding: 90px 20px; color: white; background: rgba(0,0,0,0.3); width: auto; height: 300px;border-radius: 3px;}
+.area-de-destaque .informacoes a{color: white;}
+.area-de-destaque .informacoes span{padding: 10px; color: white; display: inline-block; margin-bottom: 10px}
+.area-de-destaque .informacoes-img img, .informacoes-img img{ object-fit: cover; width: auto; height: 300px; border-radius: 3px; margin-bottom: 20px}
+.informacoes-img-small img{height: 100px;}
+.area-de-destaque .informacoes h2{font-size: 21px}
+.area-de-destaque .card{margin-bottom: 40px}
+
+/*.area-de-destaque img{filter: brightness(60%); -webkit-filter:brightness(60%); -moz-filter:brightness(60%)}*/
 
 /*carousel*/
 .carousel-inner > .item.next.left, .carousel-inner > .item.prev.right, .carousel-inner > .item{	height: 400px;}
 .carousel-inner span{padding: 10px; text-transform: uppercase}
-.carousel-caption{padding-bottom: 90px}
+.carousel-caption{padding-bottom: 80px}
 .carousel-caption{text-shadow: none}
 .carousel-inner img{filter: brightness(80%);}
+.carousel-inner > .item > a > img, .carousel-inner > .item > img {width: 100%; object-fit: cover; height: 100%;}
 
-/*footer*/
+
+
+/*sidebar*/
 .sidebar-posts ul, .sidebar{list-style: none; text-decoration: none;}
 .sidebar-posts h3{font-size: 14px}
+
 /*footer*/
-.footer-line{width: 100%; background: #b91f2e; height: 30px; padding-top: 6px; margin-bottom: 20px}
+
+footer{margin-top: 20px}
+footer .footer-line, footer .footer-bottom{width: 100%; background: #b91f2e; height: 30px; padding-top: 6px; margin-bottom: 20px}
+footer .footer-bottom{margin-bottom: 0}
 footer h3{text-transform: uppercase; color: #b91f2e}
 footer a{color: #515151}
-.footer-line a {color: white; margin-top: 10px}
+footer .footer-line a, footer .footer-bottom a {color: white; margin-top: 10px}
+footer .footer-bottom{background: grey; margin-top: 30px; bottom: 0}
