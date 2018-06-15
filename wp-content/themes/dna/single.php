@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php include_once("inc/slider-post.php") ?>
+<?php include_once("inc/slider-post.php"); ?>
 
 <div class="container">
   <div class="row">    

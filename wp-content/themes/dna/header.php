@@ -77,11 +77,11 @@
           <div class="">
            <div class="col-md-4 social-media visible-lg"> 
             <ul>
-              <li>Home</li>
+              <li><a href="index.php">Home</a></li>
               <li>|</li>
-              <li>Fale Conosco</li>
-              <li><i class="fab fa-facebook-f"></i></li>
-              <li><i class="fab fa-instagram"></i></li>
+              <li><a href="https://www3.hermespardini.com.br/pagina/162/fale-conosco.aspx" target="_blank">Fale Conosco</li>
+              <li><a href="https://www.facebook.com/hermespardini" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="https://www.instagram.com/hermes.pardini/" target="_blank"><i class="fab fa-instagram"></i></a></li>
             </ul>
             </div>
             <div class="visible-lg"><?php get_search_form(); ?></div>

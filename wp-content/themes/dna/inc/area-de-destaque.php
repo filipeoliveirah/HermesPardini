@@ -7,18 +7,17 @@
           'category_name' => 'clientes',
           'posts_per_page'=> 1
         );
-        $wp_query->query($clientes);
-        while ($wp_query->have_posts()) : $wp_query->the_post();
+        $wp_query_clientes = new WP_Query($clientes);
+        while ($wp_query_clientes->have_posts()) : $wp_query_clientes->the_post();
         ?>
-        <div class="col-md-4 col-lg-4">
-            
+        <div class="col-md-4 col-lg-4">            
             <div class="informacoes">
                 <span style="background: #b91f2e"><?php the_category(', '); ?></span>
                 <h2><?php the_title(); ?></h2>
                 <p><i class="far fa-clock"></i> <?php the_date('d/m/Y'); ?></p>
             </div>
             <div class="informacoes-img">
-                <?php the_post_thumbnail(array(400, 400), ['class' => 'img-responsive']); ?>
+                <?php the_post_thumbnail('large', ['class' => 'img-responsive']); ?>
             </div>
         </div>
         <?php
@@ -31,8 +30,8 @@
           'category_name' => 'medicos',
           'posts_per_page'=> 1
         );
-        $wp_query->query($medicos);
-        while ($wp_query->have_posts()) : $wp_query->the_post();
+        $wp_query_medicos = new WP_Query($medicos);
+        while ($wp_query_medicos->have_posts()) : $wp_query_medicos->the_post();
         ?>
         <div class="col-md-4 col-lg-4">
             
@@ -42,7 +41,7 @@
                 <p><i class="far fa-clock"></i> <?php the_date('d/m/Y'); ?></p>
             </div>
             <div class="informacoes-img">
-                <?php the_post_thumbnail('medium', ['class' => 'img-responsive']); ?>
+                <?php the_post_thumbnail('large', ['class' => 'img-responsive']); ?>
             </div>
         </div>
         <?php
@@ -55,8 +54,8 @@
           'category_name' => 'parceiros',
           'posts_per_page'=> 1
         );
-        $wp_query->query($parceiros);
-        while ($wp_query->have_posts()) : $wp_query->the_post();
+        $wp_query_parceiros = new WP_Query($parceiros);
+        while ($wp_query_parceiros->have_posts()) : $wp_query_parceiros->the_post();
         ?>
         <div class="col-md-4 col-lg-4">
             <div class="informacoes">
@@ -65,7 +64,7 @@
                 <p><i class="far fa-clock"></i> <?php the_date('d/m/Y'); ?></p>
             </div>
             <div class="informacoes-img">
-                <?php the_post_thumbnail('medium', ['class' => 'img-responsive']); ?>
+                <?php the_post_thumbnail('large', ['class' => 'img-responsive']); ?>
             </div>
         </div>
         <?php

@@ -14,11 +14,11 @@
             }
             
             else{
-                  $perfilCliente = "clientes";                  
+                  $perfilCliente = "clientes";                
             }
             
       ?>     
-      <div class="areas-de-destaque"><span class="<?php echo $perfilCliente; ?>">Postagens Recentes <?php echo $perfilCliente; ?></span></div>      
+      <div class="areas-de-destaque"><span class="<?php echo $perfilCliente; ?>">Postagens Recentes</span></div>      
       <?php
       $sidebar = new WP_Query(array(            
       'posts_per_page' => 5,      
@@ -43,4 +43,14 @@
       <?php
       endwhile; wp_reset_postdata();
       ?>
+
+      
+</div>
+
+<div class="col-md-4 sidebar-posts">
+      <div class="areas-de-destaque"><span class="<?php echo $perfilCliente; ?>">Acesse aqui</span></div>      
+            <div class="col-md-12 img-responsive align-center">
+                  <?php if ( dynamic_sidebar('banner') ) : else : endif; ?>
+            </div>
+      </div>
 </div>

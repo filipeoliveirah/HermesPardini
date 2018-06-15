@@ -36,15 +36,27 @@ register_nav_menus( array(
 // Registro de sidebar
 if ( function_exists('register_sidebar') )
 {
-
-    register_sidebar(array(
-        'name' => __( 'Sidebar'),
-        'id' => 'sidebar-internas',
-        'description' => __( 'Elementos da sidebar single e page'),
-        'before_title' => '<h2>',
-        'after_title' => '</h2>',
-    ) );                    
+  register_sidebar(array(
+      'name' => __( 'Sidebar'),
+      'id' => 'sidebar-internas',
+      'description' => __( 'Elementos da sidebar single e page'),
+      'before_title' => '<h2>',
+      'after_title' => '</h2>',
+  ) );                    
 }
+
+function banner_widgets_init() {
+  register_sidebar( array(
+      'name'          => __( 'Banner', 'dna' ),
+      'id'            => 'banner',
+      'description'   => __( 'Add widgets here to appear in your sidebar.', 'twentyfifteen' ),
+      'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+      'after_widget'  => '</aside>',
+      'before_title'  => '<p class="blog-widget-subtitle">',
+      'after_title'   => '</p>',
+  ) );
+}
+add_action( 'widgets_init', 'banner_widgets_init' );
 
 // GALERIA DE IMAGENS
 /**
@@ -58,17 +70,18 @@ add_filter('wp_get_attachment_link', 'pexeto_add_title_to_attachment', 10, 5);
 
 /* PAGINAÇÃO WORDPRESS */
 function wordpress_pagination() {
-    global $wp_query;
+  global $wp_query;
 
-    $big = 999999999;
+  $big = 999999999;
 
-    echo paginate_links( array(
-            'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-            'format' => '?paged=%#%',
-            'current' => max( 1, get_query_var('paged') ),
-            'total' => $wp_query->max_num_pages
-    ) );
+  echo paginate_links( array(
+          'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+          'format' => '?paged=%#%',
+          'current' => max( 1, get_query_var('paged') ),
+          'total' => $wp_query->max_num_pages
+  ) );
 }
+
 
 function wp_custom_breadcrumbs() {
  

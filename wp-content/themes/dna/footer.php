@@ -2,19 +2,19 @@
       <div class="footer-line">
         <div class="container">
           <div class="col-md-3">
-            <a href="https://www3.hermespardini.com.br/pagina/103/o-hermes-pardini.aspx">Institucional</a>
+            <a href="https://www3.hermespardini.com.br/pagina/103/o-hermes-pardini.aspx" target="_blank">Institucional</a>
           </div>
 
           <div class="col-md-3">
-          <a href="https://www3.hermespardini.com.br/pagina/107/sala-de-imprensa.aspx">Imprensa</a>
+          <a href="https://www3.hermespardini.com.br/pagina/107/sala-de-imprensa.aspx" target="_blank">Imprensa</a>
           </div>
 
           <div class="col-md-3">
-          <a href="http://www.hermespardini.com.br/ri">Investidores</a>
+          <a href="http://www.hermespardini.com.br/ri" target="_blank">Investidores</a>
           </div>
 
           <div class="col-md-3">
-          <a href="http://www.hermespardini.com.br/lojavirtual/">Loja Virtual</a>
+          <a href="http://www.hermespardini.com.br/lojavirtual/" target="_blank">Loja Virtual</a>
           </div>
         </div>
       </div>
@@ -64,7 +64,7 @@
       <div class="footer-bottom">
         <div class="container">
           <div class="col-md-3">
-            <a href="https://www3.hermespardini.com.br/pagina/103/o-hermes-pardini.aspx">Conheço o Grupo</a>
+            <a href="https://www3.hermespardini.com.br/pagina/103/o-hermes-pardini.aspx" target="_blank">Conheço o Grupo</a>
           </div>
 
           <div class="col-md-6">

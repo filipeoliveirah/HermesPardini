@@ -24,8 +24,9 @@ p{text-align: justify}
 
 /*header*/
 .header{background: white; padding: 20px;}
-.social-media ul li{display: inline-flex; color: #b91f2e; margin-right:15px}
 .header ul li a{font-size: 20px; font-weight: 700}
+.social-media ul li{display: inline-flex;font-size: 10px; color: #b91f2e; margin-right:15px}
+.social-media ul li a{color: #b91f2e; display: inline-flex; font-size: 15px}
 .social-media ul{padding: 0 20px;}
 
 .navbar{margin-bottom: 0}
@@ -41,10 +42,10 @@ p{text-align: justify}
 .areas-de-destaque{background: #f0f0f0; width: 100%; margin: 20px; padding: 8px 0}
 .areas-de-destaque span{padding: 10px}
 .area-de-destaque{background: #b91f2e; padding: 20px 0}
-.area-de-destaque .informacoes{position: absolute; padding: 90px 20px; color: white; background: rgba(0,0,0,0.3); width: auto; height: 300px;border-radius: 3px;}
+.area-de-destaque .informacoes{position: absolute; padding: 10px 40px; top: 0; bottom: 0; left: 0; right: 0; margin: 0 14px; color: white; background: rgba(0,0,0,0.3); width: auto; height: 187px;border-radius: 3px; }
 .area-de-destaque .informacoes a{color: white;}
 .area-de-destaque .informacoes span{padding: 10px; color: white; display: inline-block; margin-bottom: 10px}
-.area-de-destaque .informacoes-img img, .informacoes-img img{ object-fit: cover; width: auto; height: 300px; border-radius: 3px; margin-bottom: 20px}
+.area-de-destaque .informacoes-img img, .informacoes-img img{ object-fit: cover; width: 100%; height: auto; border-radius: 3px; margin-bottom: 20px}
 .informacoes-img-small img{height: 100px;}
 .area-de-destaque .informacoes h2{font-size: 21px}
 .area-de-destaque .card{margin-bottom: 40px}
