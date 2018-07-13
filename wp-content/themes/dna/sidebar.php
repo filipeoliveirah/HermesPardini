@@ -20,22 +20,24 @@
       ?>     
       <div class="areas-de-destaque"><span class="<?php echo $perfilCliente; ?>">Postagens Recentes</span></div>      
       <?php
-      $sidebar = new WP_Query(array(            
-      'posts_per_page' => 5,      
-      'category_name' => $perfilCliente
-      ));
+     
+      $array_sidebar = array(            
+            'posts_per_page' => 5,      
+            'category_name' => $perfilCliente
+      );
+      $sidebar = new WP_Query($array_sidebar);
       while($sidebar->have_posts()) : $sidebar->the_post();
       ?>      
             <div class="col-md-5">
                   <div class="informacoes-img informacoes-img-small">
                         <a href="<?php the_permalink(); ?>">
-                              <?php the_post_thumbnail('medium', ['class' => 'img-responsive responsive--full thumbnail']); ?>
+                              <?php the_post_thumbnail('medium', ['class' => 'img-responsive responsive--full']); ?>
                         </a>
                   </div>
             </div>
             <div class="col-md-7">
-                  <h5><?php the_title(); ?></h5>
-                  <p><i class="far fa-clock"></i> <?php the_date('d/m/Y'); ?></p>            
+            <a href="<?php the_permalink(); ?>"> <h4><?php the_title(); ?></h4> </a>
+                  <span><i class="far fa-clock"></i> <?php the_date('d/m/Y'); ?></span>            
             </div>
             <div class="col-md-12">      
                   <hr>

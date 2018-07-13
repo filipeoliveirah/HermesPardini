@@ -13,8 +13,8 @@
         <div class="col-md-4 col-lg-4">            
             <div class="informacoes">
                 <span style="background: #b91f2e"><?php the_category(', '); ?></span>
-                <h2><?php the_title(); ?></h2>
-                <p><i class="far fa-clock"></i> <?php the_date('d/m/Y'); ?></p>
+                <a href="<?php the_permalink(); ?>"> <h2><?php the_title(); ?></h2> </a>
+                <span><i class="far fa-clock"></i> <?php the_time("d/m/Y"); ?></span>
             </div>
             <div class="informacoes-img">
                 <?php the_post_thumbnail('large', ['class' => 'img-responsive']); ?>
@@ -37,8 +37,8 @@
             
             <div class="informacoes">
                 <span style="background:#01595b"><?php the_category(', '); ?></span>
-                <h2><?php the_title(); ?></h2>
-                <p><i class="far fa-clock"></i> <?php the_date('d/m/Y'); ?></p>
+                <a href="<?php the_permalink(); ?>"> <h2><?php the_title(); ?></h2> </a>
+                <span><i class="far fa-clock"></i> <?php the_time("d/m/Y"); ?></span>
             </div>
             <div class="informacoes-img">
                 <?php the_post_thumbnail('large', ['class' => 'img-responsive']); ?>
@@ -60,8 +60,8 @@
         <div class="col-md-4 col-lg-4">
             <div class="informacoes">
                 <span style="background: #7c438a"><?php the_category(', '); ?></span>
-                <h2><?php the_title(); ?></h2>
-                <p><i class="far fa-clock"></i> <?php the_date('d/m/Y'); ?></p>
+                <a href="<?php the_permalink(); ?>"> <h2><?php the_title(); ?></h2> </a>
+                <span><i class="far fa-clock"></i> <?php the_time("d/m/Y"); ?></span>
             </div>
             <div class="informacoes-img">
                 <?php the_post_thumbnail('large', ['class' => 'img-responsive']); ?>

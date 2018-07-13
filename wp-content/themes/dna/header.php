@@ -20,12 +20,16 @@
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />    
+    <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   </head>
   <!-- NAVBAR
   ================================================== -->
@@ -52,7 +56,16 @@
                     </button>
                     <a class="navbar-brand visible-xs" href="#" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">Menu</a>
                   </div>
-
+                  
+                  <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+                    <ul id="menu-principal" class="nav navbar-nav">
+                      <li id="menu-item-8" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a title="Clientes" href="<?php bloginfo('home'); ?>/?cat=4/" style="color: #d43f3a">Clientes</a></li>
+                      <li id="menu-item-9" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9"><a title="Médicos" href="<?php bloginfo('home'); ?>/?cat=6/" style="color: green">Médicos</a></li>
+                      <li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10"><a title="Parceiros" href="<?php bloginfo('home'); ?>/?cat=5/" style="color: #7c438a">Parceiros</a></li>
+                      <li id="menu-item-11  " class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11"><a title="Materiais" href="<?php bloginfo('home'); ?>/?post_type=materiais">Materiais</a></li>
+                    </ul>
+                  </div>
+                  <!--
                   <?php
                     wp_nav_menu( array(
                     'menu'              => 'primary',
@@ -65,7 +78,7 @@
                     'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
                     'walker'            => new wp_bootstrap_navwalker())
                     );
-                  ?>
+                  ?>-->
                 </div><!-- /.container-fluid -->
               </nav>
             <!--menu-->

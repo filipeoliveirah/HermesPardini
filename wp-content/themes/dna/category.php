@@ -50,11 +50,11 @@
         ?>
         <div class="col-sm-6 col-md-6" style="<?php if($c%2 == 0): echo "min-height: 520px"; endif;?>">
           <div class="thumbnail">
-          <?php the_post_thumbnail('large', ['class' => 'img-responsive']); ?> 
+          <a href="<?php the_permalink(); ?>"> <?php the_post_thumbnail('large', ['class' => 'img-responsive']); ?> </a>
             <div class="caption">
-              <h4><?php the_title(); ?></h4>
-              <p> <?php the_excerpt(); ?></p>
-                <a href="<?php the_permalink(); ?>" class="btn btn-primary clientes" role="button">Leia mais</a>
+            <a href="<?php the_permalink(); ?>"> <h4><?php the_title(); ?></h4> </a>
+              <p> <a href="<?php the_permalink(); ?>"> <?php the_excerpt(); ?> </a></p>
+                <!--<a href="<?php the_permalink(); ?>" class="btn btn-primary clientes" role="button">Leia mais</a>-->
             </div>
           </div>
         </div>

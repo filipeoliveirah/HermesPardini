@@ -13,14 +13,17 @@ Text Domain: dnadevendas.com.br
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
-body{overflow-x: hidden}
-h1{font-size: 28px; text-transform: uppercase; font-weight: 700}
-h4{font-size: 14px; text-transform: uppercase;}
+body{overflow-x: hidden; font-family: 'Montserrat', sans-serif;}
+h1{font-size: 38px; text-transform: uppercase; font-weight: 900}
+h4{font-size: 18px; color: black; font-weight: 900}
 h1, h2, h3, h4, h5{margin-top: 0;}
 .linha-topo, .linha-topo-bottom{width: 100%; background: #b91f2e; margin: 0; height: 2px; top: 0;}
 .linha-topo-bottom{background: #d2d2d2;}
 hr{border: 1px solid #d2d2d2;}
-p{text-align: justify}
+p{text-align: justify; color: grey; font-size: 15px}
+a > h1{color: white; text-decoration: none}
+a:hover> h1{color: white;}
+a{color: grey}
 
 /*header*/
 .header{background: white; padding: 20px;}
@@ -39,15 +42,15 @@ p{text-align: justify}
 .parceiros{background: #7c438a; color: white; border: 0}
 
 /*areas de destaque*/
-.areas-de-destaque{background: #f0f0f0; width: 100%; margin: 20px; padding: 8px 0}
+.areas-de-destaque{background: #f0f0f0; width: 100%; margin: 15px; padding: 8px 0}
 .areas-de-destaque span{padding: 10px}
 .area-de-destaque{background: #b91f2e; padding: 20px 0}
-.area-de-destaque .informacoes{position: absolute; padding: 10px 40px; top: 0; bottom: 0; left: 0; right: 0; margin: 0 14px; color: white; background: rgba(0,0,0,0.3); width: auto; height: 187px;border-radius: 3px; }
+.area-de-destaque .informacoes{position: absolute; padding: 10px 40px; top: 0; bottom: 0; left: 0; right: 0; margin: 0 14px; color: white; background: rgba(0,0,0,0.5); width: auto; height: 183px;border-radius: 3px; }
 .area-de-destaque .informacoes a{color: white;}
 .area-de-destaque .informacoes span{padding: 10px; color: white; display: inline-block; margin-bottom: 10px}
 .area-de-destaque .informacoes-img img, .informacoes-img img{ object-fit: cover; width: 100%; height: auto; border-radius: 3px; margin-bottom: 20px}
 .informacoes-img-small img{height: 100px;}
-.area-de-destaque .informacoes h2{font-size: 21px}
+.area-de-destaque .informacoes h2{font-size: 18px}
 .area-de-destaque .card{margin-bottom: 40px}
 
 /*.area-de-destaque img{filter: brightness(60%); -webkit-filter:brightness(60%); -moz-filter:brightness(60%)}*/
@@ -55,7 +58,7 @@ p{text-align: justify}
 /*carousel*/
 .carousel-inner > .item.next.left, .carousel-inner > .item.prev.right, .carousel-inner > .item{	height: 400px;}
 .carousel-inner span{padding: 10px; text-transform: uppercase}
-.carousel-caption{padding-bottom: 80px}
+.carousel-caption{padding-bottom: 110px}
 .carousel-caption{text-shadow: none}
 .carousel-inner img{filter: brightness(80%);}
 .carousel-inner > .item > a > img, .carousel-inner > .item > img {width: 100%; object-fit: cover; height: 100%;}
@@ -68,10 +71,10 @@ p{text-align: justify}
 
 /*footer*/
 
-footer{margin-top: 20px}
+footer{margin-top: 20px; background: #b91f2e; color: white; padding-top: 20px }
 footer .footer-line, footer .footer-bottom{width: 100%; background: #b91f2e; height: 30px; padding-top: 6px; margin-bottom: 20px}
 footer .footer-bottom{margin-bottom: 0}
-footer h3{text-transform: uppercase; color: #b91f2e}
-footer a{color: #515151}
+footer h4{text-transform: uppercase; color: white; font-weight: 900; margin: 20px 0}
+footer a, footer a:hover{color: antiquewhite}
 footer .footer-line a, footer .footer-bottom a {color: white; margin-top: 10px}
-footer .footer-bottom{background: grey; margin-top: 30px; bottom: 0}
+footer .footer-bottom{background: darkred; margin-top: 30px; bottom: 0}

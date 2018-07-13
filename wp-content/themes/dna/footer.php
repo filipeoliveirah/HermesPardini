@@ -1,4 +1,5 @@
     <footer>
+      <!--
       <div class="footer-line">
         <div class="container">
           <div class="col-md-3">
@@ -17,7 +18,7 @@
           <a href="http://www.hermespardini.com.br/lojavirtual/" target="_blank">Loja Virtual</a>
           </div>
         </div>
-      </div>
+      </div>-->
       <div class="container">
         <div class="col-md-3">
           <h4>Clientes</h4>

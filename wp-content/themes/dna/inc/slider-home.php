@@ -7,11 +7,11 @@
     <ol class="carousel-indicators">
     <?php
         $inc_slide = 0;
-        $args = array( 
+        $args_slider = array( 
           'category_name' => 'destaque',
           //'posts_per_page'=> 3
         );
-        $wp_query->query($args);
+        $wp_query->query($args_slider);
         while ($wp_query->have_posts()) : $wp_query->the_post();
       ?>  
       <li data-target="#myCarousel" data-slide-to="<?php echo $inc_slide; ?>" class="<?php if($inc_slide == 0): echo 'active';  endif;?>"></li>
@@ -25,18 +25,18 @@
     <?php 
       $inc = 0;
       $wp_query = new WP_Query();
-      $args = array( 
+      $array_slider = array( 
         'category_name' => 'destaque',
         'posts_per_page'=> 3
       );
-      $wp_query->query($args);
+      $wp_query->query($array_slider);
       while ($wp_query->have_posts()) : $wp_query->the_post();
     ?>
     <div class="item <?php if($inc == 0): echo 'active'; endif; ?>">
       <?php the_post_thumbnail('full'); ?>
       <div class="container">
         <div class="carousel-caption">
-          <h1><?php the_title(); ?></h1>
+          <a href="<?php the_permalink(); ?>"><h1><?php the_title(); ?></h1></a>
         </div>
       </div>
     </div>
