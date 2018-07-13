@@ -1,21 +1,28 @@
 <div class="col-md-4 sidebar-posts">
-      <?php       
-            $perfilCliente = single_cat_title("", false);
-            if($perfilCliente == "Médicos"){
-                  $perfilCliente = "medicos";      
-            }
-            
-            elseif($perfilCliente == "Parceiros"){
-                  $perfilCliente = "parceiros";
-            }            
-                  
-            elseif($perfilCliente == "Clientes"){
-                  $perfilCliente = "clientes";
-            }
-            
-            else{
-                  $perfilCliente = "clientes";                
-            }
+      <?php
+           global $post;
+           $postcat = get_the_category( $post->ID );
+           if(esc_html( $postcat[0]->name ) == 'Destaque'){
+             $perfilCliente = esc_html( $postcat[1]->name );
+             $postcat = $perfilCliente;
+           }else{
+             $perfilCliente = esc_html( $postcat[0]->name );
+             $postcat = $perfilCliente;
+           }          
+           
+           //$perfilCliente = single_cat_title("", false);
+           if($perfilCliente == 'Médicos'){
+             $perfilCliente = "medicos";      
+           }          
+           elseif($perfilCliente == 'Parceiros'){
+             $perfilCliente = "parceiros";
+           }                            
+           elseif($perfilCliente == 'Clientes'){
+             $perfilCliente = "clientes";
+           }          
+           else{
+             $perfilCliente = "clientes";                
+           }  
             
       ?>     
       <div class="areas-de-destaque"><span class="<?php echo $perfilCliente; ?>">Postagens Recentes</span></div>      

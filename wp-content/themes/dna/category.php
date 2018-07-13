@@ -31,20 +31,37 @@
 <?php get_header();?>
 <div class="container">
     <div class="col-md-8">
-        <?php $perfilCliente = single_cat_title("", false);
-          if($perfilCliente == "Médicos"){
-            $perfilCliente = "medicos";      
-          }elseif($perfilCliente == "Parceiros"){
-            $perfilCliente = "parceiros";
+      <?php
+          global $post;
+          $postcat = get_the_category( $post->ID );
+          if(esc_html( $postcat[0]->name ) == 'Destaque'){
+            $perfilCliente = esc_html( $postcat[1]->name );
+            $postcat = $perfilCliente;
           }else{
+            $perfilCliente = esc_html( $postcat[0]->name );
+            $postcat = $perfilCliente;
+          }          
+          
+          //$perfilCliente = single_cat_title("", false);
+          if($perfilCliente == 'Médicos'){
+            $perfilCliente = "medicos";      
+          }          
+          elseif($perfilCliente == 'Parceiros'){
+            $perfilCliente = "parceiros";
+          }                            
+          elseif($perfilCliente == 'Clientes'){
             $perfilCliente = "clientes";
-          }
-        ?>
-        <div class="areas-de-destaque"><span class="<?php echo $perfilCliente; ?>"><?php single_cat_title(""); ?></span></div>        
+          }          
+          else{
+            $perfilCliente = "clientes";                
+          }              
+        ?>   
+        <div class="areas-de-destaque"><span class="<?php echo $perfilCliente; ?>"><?php echo $postcat; ?></span></div>        
         <?php
             $c = 1;
             $posts_slides = new WP_Query(array(
-            'posts_per_page' => 4
+            'posts_per_page' => 4,
+            'category_name' => $perfilCliente
             ));
             while($posts_slides->have_posts()) : $posts_slides->the_post();
         ?>
